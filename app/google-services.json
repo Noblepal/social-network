@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "423098150581",
+    "firebase_url": "https://masti-b0eb2.firebaseio.com",
+    "project_id": "masti-b0eb2",
+    "storage_bucket": "masti-b0eb2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:423098150581:android:83b5f6f85273f01b0218fc",
+        "android_client_info": {
+          "package_name": "com.famousindiasocialnetwork"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "423098150581-nn4u7rv6usnqjfvnp50s00vp0ev9aek9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.famousindiasocialnetwork",
+            "certificate_hash": "de8855a17251e75e9d7220db1f9c28b997f038a6"
+          }
+        },
+        {
+          "client_id": "423098150581-lua08lcclmln090kac0f95oameqj0l89.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.famousindiasocialnetwork",
+            "certificate_hash": "6573159c9c48eff76b76a6d195a87c3ffc4247ec"
+          }
+        },
+        {
+          "client_id": "423098150581-pnoto7n4r79kg00l0shlomf1ckfgeeir.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlXfhbDprX93x6xOCXZUOyI-JeqZVx63Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "423098150581-pnoto7n4r79kg00l0shlomf1ckfgeeir.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

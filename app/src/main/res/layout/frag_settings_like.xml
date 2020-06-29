@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?actionBarSize"
+    android:background="@android:color/white"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <com.famousindiasocialnetwork.view.MontserratTextView
+        style="@style/Base.TextAppearance.AppCompat.Headline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/like_us_on" />
+
+    <com.famousindiasocialnetwork.view.MontserratTextView
+        android:id="@+id/frag_settings_like_fb"
+        style="@style/TextAppearance.AppCompat.Subhead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_action_facebook"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="@string/facebook"
+        android:textColor="@color/fb_blue" />
+
+
+    <com.famousindiasocialnetwork.view.MontserratTextView
+        android:id="@+id/frag_settings_like_gplus"
+        style="@style/TextAppearance.AppCompat.Subhead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_action_gplus"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="@string/google_plus"
+        android:textColor="@color/gplus_red" />
+
+
+    <com.famousindiasocialnetwork.view.MontserratTextView
+        android:id="@+id/frag_settings_like_twitter"
+        style="@style/TextAppearance.AppCompat.Subhead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_action_twitter"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="@string/twitter"
+        android:textColor="@color/twitter_blue" />
+
+    <com.famousindiasocialnetwork.view.MontserratTextView
+        android:id="@+id/frag_settings_like_rate_us"
+        style="@style/TextAppearance.AppCompat.Subhead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_star"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="Rate Us" />
+
+</LinearLayout>

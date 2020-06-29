@@ -1,0 +1,62 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">famous</string>
+
+    <!-- <string name="confirm_country_code">Please confirm your country code and enter your phone number</string> -->
+
+    <string name="notification">Notification</string>
+    <!--<string name="web_client_id">672726047341-qlckj3fi2jn9rb2tkinb92en55v3fnvd.apps.googleusercontent.com</string>-->
+    <string name="web_client_id">423098150581-pnoto7n4r79kg00l0shlomf1ckfgeeir.apps.googleusercontent.com</string>
+    <string name="empty_text_chat_list">Your chats appear here\nStart chatting by selecting a user.</string>
+    <string name="authority">com.verbosetech.weshare.fileprovider</string>
+
+
+    <!-- profile /-->
+
+    <!-- comment -->
+    <string name="add_a_comment">Write a comment</string>
+    <string name="foxy_logo">Foxy Logo</string>
+    <string name="reaction">reaction</string>
+    <string name="home_tab">Home tab</string>
+    <string name="profile">Profile</string>
+    <string name="push_notification">Push Notification</string>
+    <string name="get_support_at">Get support at …</string>
+    <string name="like_us_on">Like us on :</string>
+    <string name="facebook">Facebook</string>
+    <string name="google_plus">Google Plus</string>
+    <string name="twitter">Twitter</string>
+    <string name="like">Like</string>
+    <string name="like_notification">Like Notification</string>
+
+    <string name="comment">Comment</string>
+    <string name="share">Share</string>
+    <string name="comment_notification">Comment Notification</string>
+    <string name="alert_setting">Alert Settings</string>
+    <string name="txt_close">Close</string>
+    <string name="post_now">Post Now</string>
+    <string name="text">Text</string>
+    <string name="picture">Picture</string>
+    <string name="video">Video</string>
+
+    <string name="find_it">find it</string>
+    <string name="commented">commented</string>
+    <string name="support_email">support@foxy.com</string>
+
+    <!--Walkthrough-->
+
+    <!-- Facebook application ID and custom URL scheme (app ID prefixed by 'fb'). -->
+    <string name="facebook_app_id">2045944838979172</string>
+    <string name="fb_login_protocol_scheme">fb2045944838979172</string>
+    <string name="logout">Logout</string>
+    <string name="bookmarks">Saved Posts</string>
+    <string name="feedback_heading_1">We\'re working hard to giving you the best user experiance</string>
+    <string name="feedback_heading_2">Suggest us and leave your opinion to improve us.</string>
+    <string name="search">Search</string>
+    <string name="report">Report</string>
+    <string name="msg_add_picture">Tap to add picture</string>
+    <string name="msg_add_video">Tap to add video</string>
+    <string name="delete">Delete</string>
+    <string name="chats">Chats</string>
+
+    <!-- TODO: Remove or change this placeholicon_texttext -->
+
+</resources>

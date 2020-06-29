@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#d34836</color>
+    <color name="colorPrimaryDark">#d34836</color>
+    <color name="colorAccent">#ff0065</color>
+    <color name="colorText">#212121</color>
+    <color name="colorTextSecondary">#757575</color>
+    <color name="colorDivider">#BDBDBD</color>
+    <color name="white">#FFFFFF</color>
+    <color name="colorBgDrawer">#f5f5f5</color>
+
+    <color name="colorBgLight">#EEEEEE</color>
+    <color name="textColor4">#5A5A5A</color>
+    <color name="textColor1">#727272</color>
+    <color name="textColor3">#b6b6b6</color>
+
+    <color name="light_gray">#f7f7f7</color>
+    <color name="gray">#e0e0e0</color>
+    <color name="bg_gray">#e8e8e8</color>
+
+    <color name="text_below">#666</color>
+
+    <color name="fb_blue">#3b5998</color>
+    <color name="gplus_red">#d34836</color>
+    <color name="twitter_blue">#00aced</color>
+
+    <color name="trans_black_light">#33424242</color>
+    <color name="trans_black_dark">#66424242</color>
+
+</resources>

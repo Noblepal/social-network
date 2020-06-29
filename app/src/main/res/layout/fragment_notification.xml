@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/frag_home_feeds_swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/fragment_notification_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:scrollbars="vertical" />
+
+            <!--
+
+            <com.verbosetech.weshare.view.MontserratTextView
+                android:id="@+id/fragment_notification_view_all"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                andricon_texttext="@string/view_all"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+                -->
+
+            <LinearLayout
+                android:id="@+id/empty_view_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="64dp"
+                android:paddingLeft="64dp"
+                android:paddingRight="64dp"
+                android:visibility="gone">
+
+                <com.famousindiasocialnetwork.view.MontserratTextView
+                    style="@style/TextAppearance.AppCompat.Headline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:drawableLeft="@drawable/ic_error_outline_accent_24dp"
+                    android:drawablePadding="4dp"
+                    android:text="Ouch..."
+                    android:textColor="@android:color/black" />
+
+                <com.famousindiasocialnetwork.view.MontserratTextView
+                    android:id="@+id/empty_view_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No notifications found at the moment" />
+
+                <com.famousindiasocialnetwork.view.MontserratTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="( Swipe down to retry. )"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>
