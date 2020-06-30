@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#d34836</color>
-    <color name="colorPrimaryDark">#d34836</color>
-    <color name="colorAccent">#ff0065</color>
+    <color name="colorPrimary">#E84826</color>
+    <color name="colorPrimaryDark">#E84826</color>
+    <color name="colorAccent">#224e11</color>
     <color name="colorText">#212121</color>
     <color name="colorTextSecondary">#757575</color>
     <color name="colorDivider">#BDBDBD</color>
@@ -18,7 +18,7 @@
     <color name="gray">#e0e0e0</color>
     <color name="bg_gray">#e8e8e8</color>
 
-    <color name="text_below">#666</color>
+    <color name="text_below">#e84826</color>
 
     <color name="fb_blue">#3b5998</color>
     <color name="gplus_red">#d34836</color>

@@ -8,23 +8,19 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.media.MediaMetadataRetriever;
 import android.media.ThumbnailUtils;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.core.content.ContextCompat;
-import androidx.localbroadcastmanager.content.LocalBroadcastManager;
-import androidx.core.view.ViewCompat;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.webkit.MimeTypeMap;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -32,33 +28,44 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
+import androidx.core.view.ViewCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.bumptech.glide.request.RequestOptions;
-import com.kbeanie.multipicker.api.VideoPicker;
-import com.kbeanie.multipicker.api.callbacks.VideoPickerCallback;
-import com.kbeanie.multipicker.api.entity.ChosenVideo;
+import com.famousindiasocialnetwork.R;
 import com.famousindiasocialnetwork.activity.MainActivity;
 import com.famousindiasocialnetwork.model.Post;
-import com.famousindiasocialnetwork.R;
 import com.famousindiasocialnetwork.network.ApiUtils;
 import com.famousindiasocialnetwork.network.DrService;
 import com.famousindiasocialnetwork.network.request.CreatePostRequest;
 import com.famousindiasocialnetwork.network.response.CreatePostResponse;
 import com.famousindiasocialnetwork.network.response.ProfileResponse;
 import com.famousindiasocialnetwork.util.Constants;
+import com.famousindiasocialnetwork.util.FileUtils;
 import com.famousindiasocialnetwork.util.FirebaseUploader;
 import com.famousindiasocialnetwork.util.Helper;
+import com.famousindiasocialnetwork.util.MyFileProvider;
 import com.famousindiasocialnetwork.util.SharedPreferenceUtil;
 import com.kbeanie.multipicker.api.CameraImagePicker;
 import com.kbeanie.multipicker.api.ImagePicker;
 import com.kbeanie.multipicker.api.Picker;
+import com.kbeanie.multipicker.api.VideoPicker;
 import com.kbeanie.multipicker.api.callbacks.ImagePickerCallback;
+import com.kbeanie.multipicker.api.callbacks.VideoPickerCallback;
 import com.kbeanie.multipicker.api.entity.ChosenImage;
+import com.kbeanie.multipicker.api.entity.ChosenVideo;
 
 import java.io.File;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -432,7 +439,34 @@ public class PostFragment extends Fragment implements ImagePickerCallback, Video
     @Override
     public void onVideosChosen(List<ChosenVideo> list) {
         mediaFile = new File(Uri.parse(list.get(0).getOriginalPath()).getPath());
+
         if (mediaFile.length() / 1024 <= 16384) { //if less than 16mb
+
+            if (getMimeType(mediaFile.getAbsolutePath()).startsWith("video/")) {//Video file
+                MediaMetadataRetriever retriever = new MediaMetadataRetriever();
+                //use one of overloaded setDataSource() functions to set your data source
+                retriever.setDataSource(getContext(), MyFileProvider.getUriForFile(getContext(),
+                        getContext().getString(R.string.authority), mediaFile));
+                String time = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION);
+                long timeInMillisec = Long.parseLong(time);
+                Log.e("customTag", "onVideosChosen: Video length: " + timeInMillisec);
+
+                long expectedTime = TimeUnit.MINUTES.toMillis(1);
+                Log.e("customTag", "onVideosChosen: expectedTime: " + expectedTime);
+
+                if (timeInMillisec > expectedTime) {//Duration longer than 1 minute
+                    Toast.makeText(getContext(), "Please choose video less than 1 minute long", Toast.LENGTH_SHORT).show();
+                    Log.e("customTag", "onVideosChosen: Video longer that 1 minute");
+                } else {
+                    Log.e("customTag", "onVideosChosen: Video appropriate length");
+                }
+
+                retriever.release();
+
+                return;
+            }
+
+
             new AsyncTask<File, Void, Bitmap>() {
                 @Override
                 protected Bitmap doInBackground(File... files) {
@@ -452,6 +486,17 @@ public class PostFragment extends Fragment implements ImagePickerCallback, Video
             mediaFile = null;
             Toast.makeText(getContext(), "Please choose video less than 16MB", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    // url = file path or whatever suitable URL you want.
+    public static String getMimeType(String url) {
+        String type = null;
+        String extension = MimeTypeMap.getFileExtensionFromUrl(url);
+        if (extension != null) {
+            type = MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension);
+        }
+        Log.i("customTag", "getMimeType: " + type);
+        return type;
     }
 
     @Override

@@ -4,7 +4,7 @@
 
     <item
         android:id="@+id/activity_settings_menu_done"
-        android:icon="@drawable/ic_action_tick"
+        android:icon="@drawable/ic_m_tick"
         android:title="Done"
         app:showAsAction="always" />
 </menu>

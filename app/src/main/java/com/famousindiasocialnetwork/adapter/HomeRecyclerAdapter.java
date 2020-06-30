@@ -422,7 +422,7 @@ public class HomeRecyclerAdapter extends EasyRecyclerViewAdapter<Post> {
         void setLikedView(boolean liked) {
 //            like.setTypeface(null, liked ? Typeface.BOLD : Typeface.NORMAL);
 //            like.setTextColor(ContextCompat.getColor(context, liked ? R.color.colorPrimary : R.color.colorText));
-            likeIcon.setImageResource(liked ? R.drawable.ic_like_blue_18dp : R.drawable.ic_like_gray_18dp);
+            likeIcon.setImageResource(liked ? R.drawable.ic_m_like_active : R.drawable.ic_m_like);
         }
 
         @Override

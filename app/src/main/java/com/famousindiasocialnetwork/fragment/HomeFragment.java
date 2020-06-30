@@ -3,21 +3,22 @@ package com.famousindiasocialnetwork.fragment;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import com.google.android.material.tabs.TabLayout;
-import androidx.fragment.app.Fragment;
-import androidx.viewpager.widget.ViewPager;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
+
+import com.famousindiasocialnetwork.R;
 import com.famousindiasocialnetwork.adapter.UniversalPagerAdapter;
 import com.famousindiasocialnetwork.listener.MainInteractor;
-import com.famousindiasocialnetwork.R;
 import com.famousindiasocialnetwork.listener.ShowHideViewListener;
 import com.famousindiasocialnetwork.util.SharedPreferenceUtil;
+import com.google.android.material.tabs.TabLayout;
 
 public class HomeFragment extends Fragment {
     private ShowHideViewListener showHideViewListener;
@@ -76,7 +77,8 @@ public class HomeFragment extends Fragment {
     private void initViewPager() {
         UniversalPagerAdapter adapter = new UniversalPagerAdapter(getChildFragmentManager());
         adapter.addFrag(HomeFeedsFragment.newInstance("hot", mListener.getBookmarkPosts(), -1, true, showHideViewListener), "Home");
-        adapter.addFrag(HomeFeedsFragment.newInstance("feed", mListener.getBookmarkPosts(), -1, false, showHideViewListener), "My Posts");
+        adapter.addFrag(HomeFeedsFragment.newInstance("feed", mListener.getBookmarkPosts(), -1, false, showHideViewListener), "Private Feeds");
+        // adapter.addFrag(FollowersFragment.newInstance(), "Followers");
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
         reduceMarginsInTabs(tabLayout, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 25f, getResources().getDisplayMetrics()));

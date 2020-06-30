@@ -191,7 +191,7 @@
                     android:layout_height="25dp"
                     android:layout_marginEnd="10dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/ic_like_gray_18dp" />
+                    android:src="@drawable/ic_m_like" />
 
                 <com.famousindiasocialnetwork.view.MontserratTextView
                     android:id="@+id/tvLikeCount"
@@ -217,7 +217,8 @@
                     android:layout_height="25dp"
                     android:layout_marginEnd="10dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/ic_share_gray_24dp" />
+                    android:tint="#BDBDBD"
+                    android:src="@drawable/ic_m_share" />
 
                 <com.famousindiasocialnetwork.view.MontserratTextView
                     android:layout_width="wrap_content"
@@ -242,7 +243,7 @@
                     android:layout_height="25dp"
                     android:layout_marginEnd="10dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/ic_comment_gray_18dp" />
+                    android:src="@drawable/ic_m_comment" />
 
                 <com.famousindiasocialnetwork.view.MontserratTextView
                     android:id="@+id/tvCommentCount"

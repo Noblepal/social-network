@@ -56,6 +56,8 @@
     <string name="msg_add_video">Tap to add video</string>
     <string name="delete">Delete</string>
     <string name="chats">Chats</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!-- TODO: Remove or change this placeholicon_texttext -->
 
