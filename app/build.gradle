@@ -47,8 +47,8 @@ android {
         applicationId "com.famousindiasocialnetwork"
         minSdkVersion 16
         targetSdkVersion 30
-        versionCode 6
-        versionName "6"
+        versionCode 4
+        versionName "4"
         multiDexEnabled true
 
         manifestPlaceholders = [
@@ -116,6 +116,9 @@ dependencies {
 
     //Onesignal
     implementation 'com.onesignal:OneSignal:[3.11.2, 3.99.99]'
+
+    //Auto updates
+    implementation 'com.google.android.play:core:1.6.4'
 }
 
 apply plugin: 'com.google.gms.google-services'
