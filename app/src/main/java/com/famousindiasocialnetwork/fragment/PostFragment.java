@@ -49,7 +49,6 @@ import com.famousindiasocialnetwork.network.request.CreatePostRequest;
 import com.famousindiasocialnetwork.network.response.CreatePostResponse;
 import com.famousindiasocialnetwork.network.response.ProfileResponse;
 import com.famousindiasocialnetwork.util.Constants;
-import com.famousindiasocialnetwork.util.FileUtils;
 import com.famousindiasocialnetwork.util.FirebaseUploader;
 import com.famousindiasocialnetwork.util.Helper;
 import com.famousindiasocialnetwork.util.MyFileProvider;
@@ -440,7 +439,7 @@ public class PostFragment extends Fragment implements ImagePickerCallback, Video
     public void onVideosChosen(List<ChosenVideo> list) {
         mediaFile = new File(Uri.parse(list.get(0).getOriginalPath()).getPath());
 
-        if (mediaFile.length() / 1024 <= 16384) { //if less than 16mb
+        if (mediaFile.length() / 1024 <= 51200) { //if less than 50mb
 
             if (getMimeType(mediaFile.getAbsolutePath()).startsWith("video/")) {//Video file
                 MediaMetadataRetriever retriever = new MediaMetadataRetriever();
@@ -484,7 +483,7 @@ public class PostFragment extends Fragment implements ImagePickerCallback, Video
             }.execute(mediaFile);
         } else {
             mediaFile = null;
-            Toast.makeText(getContext(), "Please choose video less than 16MB", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), "Please choose video less than 50MB", Toast.LENGTH_SHORT).show();
         }
     }
 

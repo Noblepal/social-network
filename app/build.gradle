@@ -47,12 +47,12 @@ android {
         applicationId "com.famousindiasocialnetwork"
         minSdkVersion 16
         targetSdkVersion 30
-        versionCode 5
-        versionName "5"
+        versionCode 6
+        versionName "6"
         multiDexEnabled true
 
         manifestPlaceholders = [
-                onesignal_app_id: '6e38c18e-8ec2-4974-818d-73b03b313b58',
+                onesignal_app_id: 'ff15e9cc-398f-4794-ab77-278e54964493',
                 // Project number pulled from dashboard, local value is ignored.
                 onesignal_google_project_number: 'REMOTE'
         ]
