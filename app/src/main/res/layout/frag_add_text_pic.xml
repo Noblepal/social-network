@@ -34,7 +34,7 @@
                 android:layout_width="63dp"
                 android:layout_height="63dp"
                 android:layout_marginBottom="20dp"
-                android:src="@drawable/icon_text" />
+                android:src="@drawable/textupload" />
 
             <com.famousindiasocialnetwork.view.MontserratMediumTextView
                 android:layout_width="match_parent"
@@ -58,7 +58,7 @@
                 android:layout_width="63dp"
                 android:layout_height="63dp"
                 android:layout_marginBottom="20dp"
-                android:src="@drawable/icon_picture" />
+                android:src="@drawable/photoupload" />
 
             <com.famousindiasocialnetwork.view.MontserratMediumTextView
                 android:layout_width="match_parent"
@@ -84,7 +84,7 @@
                 android:layout_width="63dp"
                 android:layout_height="63dp"
                 android:layout_marginBottom="20dp"
-                android:src="@drawable/icon_video" />
+                android:src="@drawable/videoupload" />
 
             <com.famousindiasocialnetwork.view.MontserratMediumTextView
                 android:layout_width="match_parent"

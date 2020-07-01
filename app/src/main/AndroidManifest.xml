@@ -5,13 +5,11 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_SMS" />
-    <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
@@ -40,17 +38,22 @@
             android:enabled="true" />
 
         <!-- Branch init -->
-        <meta-data
+        <!--<meta-data
             android:name="io.branch.sdk.BranchKey"
             android:value="key_live_kpxM1oAokHos5KOxa7wkTeijAsmDvj2j" />
         <meta-data
             android:name="io.branch.sdk.BranchKey.test"
-            android:value="key_test_lfzL9iFikJaTgIjLZKWEthejAAkvFL4g" />
+            android:value="key_test_lfzL9iFikJaTgIjLZKWEthejAAkvFL4g" />-->
 
+        <!-- Branch init -->
+        <meta-data
+            android:name="io.branch.sdk.BranchKey"
+            android:value="key_live_mjK9k4cQ2oF39rHEQDJr3abjAEci4W7B" />
         <!-- Branch testing (TestMode "true" to simulate fresh installs on dev environment) -->
         <meta-data
             android:name="io.branch.sdk.TestMode"
             android:value="false" />
+
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />

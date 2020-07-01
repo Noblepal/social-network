@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/bottom_bar"
     android:layout_width="match_parent"
     android:layout_height="52dp"
@@ -19,8 +18,8 @@
         android:orientation="vertical">
 
         <ImageView
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_gravity="center"
             android:contentDescription="@string/home_tab"
             android:src="@drawable/ic_home" />
@@ -46,8 +45,8 @@
         android:orientation="vertical">
 
         <ImageView
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_gravity="center"
             android:contentDescription="@string/home_tab"
             android:src="@drawable/ic_notifications_primary_dark_24dp" />
@@ -71,8 +70,8 @@
         android:orientation="vertical">
 
         <ImageView
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_gravity="center"
             android:contentDescription="@string/home_tab"
             android:src="@drawable/ic_add_circle"
@@ -88,8 +87,8 @@
         android:orientation="vertical">
 
         <ImageView
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_gravity="center"
             android:contentDescription="@string/home_tab"
             android:src="@drawable/ic_message_24dp" />
@@ -114,8 +113,8 @@
         android:orientation="vertical">
 
         <ImageView
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_gravity="center"
             android:contentDescription="@string/home_tab"
             android:src="@drawable/ic_profile_24dp" />

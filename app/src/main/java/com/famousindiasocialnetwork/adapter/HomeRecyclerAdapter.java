@@ -456,14 +456,14 @@ public class HomeRecyclerAdapter extends EasyRecyclerViewAdapter<Post> {
                         SpringAnimationHelper.performAnimation(view);
                         PopupMenu popup = new PopupMenu(context, view);
                         popup.inflate(R.menu.menu_home_item);
-                        popup.getMenu().getItem(1).setVisible(post.getUserMetaData().getId().equals(userMe.getId()));
+                        popup.getMenu().getItem(0).setVisible(post.getUserMetaData().getId().equals(userMe.getId()));
                         popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                             @Override
                             public boolean onMenuItemClick(MenuItem item) {
                                 switch (item.getItemId()) {
-                                    case R.id.action_report:
-                                        Toast.makeText(context, "You reported this post", Toast.LENGTH_SHORT).show();
-                                        break;
+                                    /*case R.id.action_report:
+                                        //Toast.makeText(context, "You reported this post", Toast.LENGTH_SHORT).show();
+                                        break;*/
                                     case R.id.action_delete:
                                         deletePost(post.getId());
                                         Toast.makeText(context, "Post deleted", Toast.LENGTH_SHORT).show();

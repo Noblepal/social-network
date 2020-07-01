@@ -12,10 +12,10 @@
         android:layout_height="wrap_content"
         android:background="@android:color/white"
         android:orientation="vertical"
-        android:paddingBottom="8dp"
         android:paddingLeft="16dp"
+        android:paddingTop="16dp"
         android:paddingRight="16dp"
-        android:paddingTop="16dp">
+        android:paddingBottom="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -50,6 +50,14 @@
             android:id="@+id/mediaPickerContainer"
             android:layout_width="match_parent"
             android:layout_height="172dp">
+
+            <ProgressBar
+                android:id="@+id/pbSettingMedia"
+                android:layout_width="24dp"
+                android:layout_margin="8dp"
+                android:visibility="gone"
+                android:layout_height="24dp"
+                android:layout_gravity="center_horizontal" />
 
             <ImageView
                 android:id="@+id/pickedMedia"
@@ -122,10 +130,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:paddingBottom="8dp"
             android:paddingLeft="16dp"
-            android:paddingRight="16dp"
             android:paddingTop="8dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="8dp"
             android:text="@string/txt_close"
             android:textAllCaps="false"
             android:textColor="@color/colorAccent"
@@ -139,10 +147,10 @@
             android:layout_weight="1"
             android:background="@drawable/round_bg_color_pink"
             android:gravity="center"
-            android:paddingBottom="8dp"
             android:paddingLeft="16dp"
-            android:paddingRight="16dp"
             android:paddingTop="8dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="8dp"
             android:text="@string/post_now"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
